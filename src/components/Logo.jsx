@@ -1,5 +1,5 @@
 import React from 'react'
-import  Blog from '../assets/Blog.png'
+import  Blog from '/src/assets/Blog.png'
 
 
 function Logo({width = '90px'}) {
