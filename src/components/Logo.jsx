@@ -1,11 +1,12 @@
 import React from 'react'
+import  Blog from '../assets/Blog.png'
 
 
 function Logo({width = '90px'}) {
   return (
     <div>
       <img width={width} className='border-2 border-red-950 rounded-3xl'
-      src={'src/assets/logo.png'} alt="logo" />
+      src={Blog} alt="logo" />
     </div>
   )
 }
