@@ -1,9 +1,11 @@
 import React, {useEffect, useState} from 'react'
 import appwriteService from "../appwrite/config";
-import {Container, PostCard} from '../components'
+import {Button, Container, PostCard} from '../components'
+import { useNavigate } from 'react-router-dom';
 
 function Home() {
     const [posts, setPosts] = useState([])
+    const nevigate = useNavigate();
 
     useEffect(() => {
         appwriteService.getPosts().then((posts) => {
@@ -22,6 +24,7 @@ function Home() {
                             <h1 className="text-2xl font-bold hover:text-gray-500">
                                 Login to read posts
                             </h1>
+                            <Button className='text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2' onClick= {()=>nevigate('/login')} >login</Button>
                         </div>
                     </div>
                 </Container>
